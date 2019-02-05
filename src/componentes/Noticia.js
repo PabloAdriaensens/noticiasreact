@@ -5,13 +5,18 @@ const Noticia = (props) => {
 
     const {source, description, title, url, urlToImage} = props.noticia;
 
+    const imagen = (urlToImage)
+        ?
+        <div className="card-image">
+            <img src={urlToImage} alt={title}/>
+            <span className="card-title">{source.name}</span>
+        </div>
+        : '';
+
     return (
         <div className="col m6 s12 l4">
             <div className="card">
-                <div className="card-image">
-                    <img src={urlToImage} alt={title}/>
-                    <span className="card-title">{source.name}</span>
-                </div>
+                {imagen}
                 <div className="card-content">
                     <h3>{title}</h3>
                     <p>{description}</p>
