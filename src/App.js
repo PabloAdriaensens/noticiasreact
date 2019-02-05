@@ -13,7 +13,10 @@ class App extends Component {
         this.consultarNoticias();
     }
 
-    consultarNoticias = () => {
+    consultarNoticias = categoria => {
+
+        console.log(categoria);
+
         let url = 'https://newsapi.org/v2/top-headlines?sources=cnn-es&apiKey=cedad511f5ba4da4b074c3ce57f58456';
 
         fetch(url)
@@ -34,7 +37,9 @@ class App extends Component {
                     titulo='Noticas'
                 />
                 <div className="container white contenedor-noticias">
-                    <Formulario/>
+                    <Formulario
+                        consultarNoticias = {this.consultarNoticias}
+                    />
                     <Noticias
                         noticias={this.state.noticias}
                     />

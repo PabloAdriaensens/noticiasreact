@@ -4,7 +4,6 @@ const Noticia = (props) => {
 
     const {source, description, title, url, urlToImage} = props.noticia;
 
-    console.log(urlToImage);
     return (
             <div className="col m6 s12 l4">
                 <div className="card">
