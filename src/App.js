@@ -15,7 +15,7 @@ class App extends Component {
 
     consultarNoticias = (categoria = 'general') => {
 
-        console.log(categoria);
+        // console.log(categoria);
 
         let url = `https://newsapi.org/v2/top-headlines?country=us&category=${categoria}&apiKey=cedad511f5ba4da4b074c3ce57f58456`;
 
