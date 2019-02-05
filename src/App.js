@@ -5,7 +5,7 @@ import Noticias from "./componentes/Noticias";
 class App extends Component {
 
     state = {
-        noticias: {}
+        noticias: []
     };
 
     componentDidMount() {
